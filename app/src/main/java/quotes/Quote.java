@@ -1,7 +1,6 @@
 package quotes;
 
 public class Quote {
-    private String[] tags;
     private String author;
     private String text;
 
@@ -11,11 +10,10 @@ public class Quote {
     public String getText() {
         return text;
     }
+
     @Override
     public String toString() {
-        return "Quote{" +
-                "tags='" + tags + '\'' +
-                "author='" + author + '\'' +
-                '}';
+        return "Quote" + text+'\'' +
+                "author='" + author + '\'';
     }
 }
