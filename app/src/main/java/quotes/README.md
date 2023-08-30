@@ -2,7 +2,7 @@
 
 ## Description
 
-This Java application reads a JSON file containing quotes and randomly selects and displays a quote along with its author.
+This Java application will  grab quotes from an API s and randomly selects and adds a quote to our quotes.json.
 
 ## how to install the dependency
 
