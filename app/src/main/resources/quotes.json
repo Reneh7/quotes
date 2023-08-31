@@ -1482,5 +1482,85 @@
     "body": "A leader is a person you will follow to a place you would not go by yourself.",
     "tags": [],
     "favorites_count": 1
+  },
+  {
+    "author": "Test-R199",
+    "body": "Nothing is impossible.",
+    "tags": [],
+    "favorites_count": 2
+  },
+  {
+    "author": "Confucius",
+    "body": "Before you embark on a journey of revenge, dig two graves.",
+    "tags": [
+      "revenge",
+      "philosopher",
+      "chinese"
+    ],
+    "favorites_count": 2
+  },
+  {
+    "author": "Carl Sagan",
+    "body": "Personally, I would be delighted if there were a life after death, especially if it permitted me to continue to learn about this world and others, if it gave me a chance to discover how history turns out.",
+    "tags": [
+      "death",
+      "history",
+      "learning"
+    ],
+    "favorites_count": 2
+  },
+  {
+    "author": "Mark Twain",
+    "body": "Age is an issue of mind over matter. If you don\u0027t mind, it doesn\u0027t matter.",
+    "tags": [
+      "age"
+    ],
+    "favorites_count": 2
+  },
+  {
+    "author": "Ralph Waldo Emerson",
+    "body": "A great man is always willing to be little.",
+    "tags": [
+      "great"
+    ],
+    "favorites_count": 0
+  },
+  {
+    "author": "Ralph Waldo Emerson",
+    "body": "Before we acquire great power we must acquire wisdom to use it well.",
+    "tags": [
+      "great",
+      "power",
+      "wisdom"
+    ],
+    "favorites_count": 0
+  },
+  {
+    "author": "Patrick Ness",
+    "body": "He’d known Lily forever. Or for as long as he could remember, which was basically the same thing.",
+    "tags": [],
+    "favorites_count": 0
+  },
+  {
+    "author": "Gregory David Roberts",
+    "body": "Mumbai is the sweet, sweaty smell of hope, which is the opposite of hate; and it\u0027s the sour, stifled smell of greed, which is the opposite of love. It\u0027s the smell of Gods, demons, empires, and civilizations in resurrection and decay. Its the blue skin-smell of the sea, no matter where you are in the island city, and the blood metal smell of machines. It smells of the stir and sleep and the waste of sixty million animals, more than half of them humans and rats. It smells of heartbreak, and the struggle to live, and of the crucial failures and love that produces courage. It smells of ten thousand restaurants, five thousand temples, shrines, churches and mosques, and of hunderd bazaar devoted exclusively to perfume, spices, incense, and freshly cut flowers. That smell, above all things - is that what welcomes me and tells me that I have come home. ",
+    "tags": [
+      "awake",
+      "beautiful",
+      "city",
+      "colour",
+      "empire",
+      "hate",
+      "hope",
+      "human",
+      "love",
+      "mumbai",
+      "shantaram",
+      "sleep",
+      "smell-sea",
+      "sweat",
+      "sweet"
+    ],
+    "favorites_count": 0
   }
 ]

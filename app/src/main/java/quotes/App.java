@@ -8,6 +8,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class App {
 
@@ -28,6 +29,19 @@ public class App {
         }
     }
 
+//    public static Quote readResponseFromApi(HttpURLConnection connection) {
+//        try (BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
+//            Gson gson = new Gson();
+//            APIResponse apiResponse = gson.fromJson(reader, APIResponse.class);
+//            Quote randomQuote = apiResponse.getQuote();
+//            reader.close();
+//            connection.disconnect();
+//            return randomQuote;
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
+
     public static Quote readResponseFromApi(HttpURLConnection connection) {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
             Gson gson = new Gson();
@@ -37,7 +51,15 @@ public class App {
             connection.disconnect();
             return randomQuote;
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println("Error fetching quote from API: " + e.getMessage());
+            System.out.println("Loading quotes from JSON file...");
+            Quote[] quotesFromFile = readQuotesFromFile();
+            if (quotesFromFile.length > 0) {
+                int randomIndex = new Random().nextInt(quotesFromFile.length);
+                return quotesFromFile[randomIndex];
+            } else {
+                throw new RuntimeException("No quotes available.");
+            }
         }
     }
 
@@ -60,9 +82,23 @@ public class App {
             gson.toJson(existingQuotes, writer);
             writer.close();
 
+            System.out.println("The Author: " + author);
+            System.out.println("The Quote: " + body);
+            System.out.println("=========================");
             System.out.println("Quote added to file.");
         } catch (IOException e) {
+
             throw new RuntimeException(e);
+        }
+    }
+
+    public static Quote[] readQuotesFromFile() {
+        Gson gson = new Gson();
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(App.class.getClassLoader().getResourceAsStream("quotes.json")))) {
+            return gson.fromJson(reader, Quote[].class);
+        } catch (Exception e) {
+            System.out.println("Error reading quotes from JSON file: " + e.getMessage());
+            return new Quote[0];
         }
     }
 
@@ -81,18 +117,6 @@ public class App {
             return existingQuotes;
         } catch (IOException e) {
             throw new RuntimeException(e);
-        }
-    }
-
-
-    //this method is only used for testing
-    public static Quote[] readQuotesFromFile() throws IOException {
-        Gson gson = new Gson();
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(App.class.getClassLoader().getResourceAsStream("/quotes.json")))) {
-            return gson.fromJson(reader, Quote[].class);
-        } catch (Exception e) {
-            System.out.println(e);
-            return new Quote[0];
         }
     }
 }
