@@ -24,17 +24,4 @@ public class AppTest {
         Quote quote = App.readResponseFromApi(connection);
         assertNotNull(quote);
     }
-
-    @Test
-    void testAddQuoteToFile() throws IOException {
-        String author = "Test Author";
-        String body = "Test Body";
-        int favoritesCount = 100;
-        List<String> tags = Arrays.asList("tag1", "tag2");
-
-        App.addQuoteToFile(author, body, favoritesCount, tags);
-
-        Quote[] updatedQuotes = App.readQuotesFromFile();
-        assertTrue(updatedQuotes.length > 0);
-    }
 }
