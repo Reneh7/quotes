@@ -29,19 +29,6 @@ public class App {
         }
     }
 
-//    public static Quote readResponseFromApi(HttpURLConnection connection) {
-//        try (BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
-//            Gson gson = new Gson();
-//            APIResponse apiResponse = gson.fromJson(reader, APIResponse.class);
-//            Quote randomQuote = apiResponse.getQuote();
-//            reader.close();
-//            connection.disconnect();
-//            return randomQuote;
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
-
     public static Quote readResponseFromApi(HttpURLConnection connection) {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
             Gson gson = new Gson();
